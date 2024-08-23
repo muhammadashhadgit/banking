@@ -14,6 +14,7 @@ import Link from "next/link";
 import { sidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import Footer from "./Footer";
 
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
@@ -39,7 +40,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
               width={34}
               height={34}
               alt="Horizon logo"
-            ></Image>
+            />
             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
               MooBank
             </h1>
@@ -85,7 +86,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                 USER
               </nav>
             </SheetClose>
-            FOOTER
+            <Footer user={user} type="mobile" />
           </div>
         </SheetContent>
       </Sheet>
